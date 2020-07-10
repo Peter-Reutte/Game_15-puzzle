@@ -1,0 +1,35 @@
+﻿<Window x:Class="Fifteen.MainWindow"
+        x:Name="wndGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fifteen"
+        mc:Ignorable="d"
+        Title="Игра в 15" Height="355" Width="270" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="2" BorderBrush="#FF878484" WindowStyle="ToolWindow">
+    <StackPanel Background="#e1e1cb">
+
+        <!--Панель для меню-->
+        <StackPanel Orientation="Horizontal" Background="#c04339" >
+            <Menu x:Name="menu" Margin="10,10">
+                <MenuItem Header="Игра" Height="20" Background="#c04339" BorderThickness="0" FontSize="14" Foreground="#FFB8B898" >
+                    <MenuItem x:Name="miStartGame" Height="25" Header="Начать игру" Click="btnMix_Click" Foreground="#FF39181A" Background="#FFE1E1CB" BorderThickness="1,1,1,0" ></MenuItem>
+                    <!--<MenuItem x:Name="miStatistics" Height="25" Header="Статистика" Foreground="#FF39181A" Background="#FFE1E1CB" BorderThickness="1,0,1,0" Click="miStatistics_Click" ></MenuItem>-->
+                    <MenuItem x:Name="miClose" Height="25" Header="Закрыть игру" Click="btnCloseGame_Click" Foreground="#FF39181A" Background="#FFE1E1CB" BorderThickness="1,0,1,1" ></MenuItem>
+
+                </MenuItem>
+                <MenuItem x:Name="miReferences" Header="Справка" Height="20" Background="#c04339" BorderBrush="{x:Null}" BorderThickness="0" FontSize="14" Foreground="#FFB8B898">
+                    <MenuItem x:Name="miRulesOfGame"  Height="25" Header="Правила игры" Click="miRulesOfGame_Click" Background="#FFE1E1CB" Foreground="#FF39181A"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="150" HorizontalAlignment="Left" Margin="20, 5,0,0">
+            <Label Content="Время: " Margin="5,0,0,0" FontSize="14" Foreground="#FF1D293E" />
+            <Label x:Name="lblTimer" Content="0" Width="40" HorizontalContentAlignment="Right" FontSize="14" BorderBrush="#3a4b6f" BorderThickness="1" Foreground="#c04339" />
+            <Label Content="сек." FontSize="14" Foreground="#FF1D293E"/>
+        </StackPanel>
+        <StackPanel Margin="0,0,0,0">
+            <Grid Name="gridMain" Height="200" Width="200" HorizontalAlignment="Center" Margin="10, 20"  ></Grid>
+        </StackPanel>
+    </StackPanel>
+</Window>
